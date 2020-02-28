@@ -1,27 +1,13 @@
-# FRPS
+# FRPC
 
-### FRP_S镜像
+frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。
 
-- 基于官方centos镜像
-- 开启ssh服务，并初始化root密码为123456
+### FRPC镜像
 
-### 使用
+为了方便在不同的系统中安装和配置frp，我基于docker对frp client进行了封装和打包。
 
-```
-docker pull ryaning/centos-ssh
-```
-
-### 启动
+### 下载
 
 ```
-docker run --name centos-ssh-001 \
--d ryaning/centos-ssh:latest
-```
-或者
-
-```
-docker run --privileged -ti \
---name centos-ssh-001 \
--p 22:22 \
--d ryaning/centos-ssh:latest /usr/sbin/init
+docker pull ryaning/frpc
 ```
