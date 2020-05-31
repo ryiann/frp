@@ -76,7 +76,7 @@ docker run --restart=always --network host -v /etc/frp/frps.ini:/etc/frp/frps.in
 
 当服务启动完成，登录状态查询页面（http://ip:7500），可以查询具体状态。
 
-![frp_web](https://image.ryana.cn/uploads/big/77e48c280af85ae783af0ca58000b21d.png)
+<img src="https://img.ryana.cn/2020/20200601001334.png" width="80%">
 
 2、在电脑B上修改/编写`frpc.ini`配置文件，并开启frp client服务。
 
