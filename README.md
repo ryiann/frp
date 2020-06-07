@@ -22,10 +22,39 @@ docker pull ryaning/frpc
 
 ## 使用
 
+* touch frps.ini
+
+```
+touch /etc/frp/frps.ini
+
+cat > /etc/frp/frps.ini << EOF
+[common]
+bind_port = 7000
+EOF
+```
+
 * start frps
 
 ```
 docker run --restart=always --network host -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps -d ryaning/frps
+```
+
+* touch frpc.ini
+
+```
+touch /etc/frp/frpc.ini
+
+cat > /etc/frp/frpc.ini << EOF
+[common]
+server_addr = 127.0.0.1
+server_port = 7000
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 6000
+EOF
 ```
 
 * start frpc
