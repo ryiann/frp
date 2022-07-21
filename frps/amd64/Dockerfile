@@ -1,5 +1,5 @@
 # 基础镜像
-FROM amd64/alpine:3.10
+FROM amd64/alpine:3.15
 # 作者
 LABEL maintainer="ryan <me@ryana.cn>"
 # # 定义构建参数
